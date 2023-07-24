@@ -1,9 +1,37 @@
-
+/* normalize */
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+/* variables */
+:root{
+    --principal: white;
+    --secondary: rgba(0, 0, 0, 0.521);
+    --third: black;
+    --font-primary: 'Anton', sans-serif;
+    --font-secondary: 'Rubik', sans-serif;
+    --text-lg: 2em;
+    --text-md: 1.8em;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
 /* General */
 /* Header */
 body{
     background-color: white;
-    max-width: 1080px;
+    padding: 0 76px;
+    /* max-width: 1080px; */
     font-family: var(--font-primary);
     color: var(--secondary);
 }
