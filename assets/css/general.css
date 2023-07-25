@@ -37,6 +37,7 @@ body{
 }
 header{
     background-color: white;
+    height: 170px;
 }
 header .nav{
     justify-content: space-between;
@@ -72,6 +73,7 @@ header .menu .menu_lista:hover .submenu{
     padding: 1rem;
 }
 header .menu .menu_lista .menu_link{
+    text-decoration: none;
     padding: 1rem;
     font-size: var(--text-md);
 }
@@ -80,12 +82,22 @@ header .menu .menu_lista .submenu{
     position: absolute;
     font-size: var(--text-md);
 }
+header .menu .menu_lista .submenu .submenu_link{
+    text-decoration: none;
+}
 header .menu .menu_lista .submenu .submenu_link:hover{
+    text-decoration: none;
     background-color: #4b66d269;
     padding: 0 1rem;
     border-radius: 6px;
     color: var(--principal);
     transition: .5s ease-in-out;
+}
+/* PAGINA PRINCIPAL - HOME */
+main .line_horizontal{
+    border: 2px solid #4b66d269;
+    margin: 20px 300px;
+    border-radius: 50%;
 }
 main .principal{
     background-image: url(../image/FondoPrincipal1.JPG);
@@ -239,3 +251,110 @@ main .servicios .servicios-presentacion .servicios-img{
     padding: 10px;
     background-color: transparent;
 }
+/* PAGINA CONTACTO */
+main .datos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+main .formulario{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #4b66d2;
+    border-radius: 10px;
+}
+main .formulario .busqueda, .contacto{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 200px;
+    /* height: auto;
+    margin: 10px;
+    padding: 30px;
+    border: 2px solid #4b66d2;
+    border-radius: 10px; */
+    font-size: 1.5em;
+}
+
+.group{
+    position: relative;
+    margin: 10px;
+}
+.group .input{
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid #515151;
+    background: transparent;
+}
+.group{
+    position: relative;
+}
+.group .input{
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid #515151;
+    background: transparent;
+}
+.group .input:focus{
+    outline: none;
+}
+.group .label{
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    display: flex;
+}
+.group .label-char{
+    transition: 0.2s ease all;
+    transition-delay: calc(var(--index) * .05s);
+}
+.group .input:focus ~ label .label-char,
+.group .input:valid ~ label .label-char{
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #5264AE;
+} 
+.group .bar{
+    position: relative;
+    display: block;
+    width: 200px;
+} 
+.group .bar:before,.group .bar:after{
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #5264AE;
+    transition: 0.2s ease all;
+}
+.group .bar:before{
+    left: 50%;
+}
+.group .bar:after{
+    right: 50%;
+}
+.group .input:focus ~ .bar:before,
+.group .input:focus ~ .bar:after{
+    width: 50%;
+}
+  
+  
