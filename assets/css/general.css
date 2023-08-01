@@ -37,7 +37,7 @@ body{
 }
 header{
     background-color: white;
-    height: 170px;
+    height: 145px;
 }
 header .nav{
     justify-content: space-between;
@@ -52,6 +52,7 @@ header .logo .imgLogo{
     width: 60%;
     height: auto;
     padding: 1rem;
+    color: black;
 }
 header .menu{
     flex-basis: 50%;
@@ -93,6 +94,45 @@ header .menu .menu_lista .submenu .submenu_link:hover{
     color: var(--principal);
     transition: .5s ease-in-out;
 }
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+  }
+.hamburguer-menu .menu_burguer{
+    width: 100px;
+    height: 50px;
+    background-color: black;
+    margin: 5px;
+}
+@media (max-width: 768px) {
+    .menu {
+      display: none;
+    }
+    .hamburger-menu {
+      display: block;
+    }
+    .hamburger-menu.active .menu_burguer {
+      background-color: #260aa7; 
+    } 
+    .menu.active {
+      display: block;
+    }
+}  
+/* FIN HEADER */
+/* AQUI COMIENZA FOOTER */
+.footer{
+    padding: 20px;
+}
+.footer .footer-item, .footer-item1, .footer-item2, .footer-item3{
+    padding: 10px;
+}
+.footer .Follow_us .red_social{
+    padding: 5px;
+}
+.footer .Follow_us .red_social:hover{
+    transform: scale(1.1) rotate(-3deg);
+}
+/* FIN FOOTER */
 /* PAGINA PRINCIPAL - HOME */
 main .line_horizontal{
     border: 2px solid #4b66d269;
@@ -107,18 +147,12 @@ main .principal{
     border-radius: 0 150px 0 150px;
     min-height: 500px;
 }
-main .principal .btn .btn-1 .btn-1-i,
-main .principal .btn .btn-1 .btm-1-i{
-    width: 30px;
-    height: auto;
-    background-color: #4b66d2;
-}
 main .principal .titulo{
     position: relative;
     text-align: center;
-    font-size: 3em;
+    font-size: 4em;
     color: white;
-    top: 250px;
+    top: 350px;
 }
 main .principal .btn{
     border: none;
@@ -132,26 +166,6 @@ main .principal .btn{
     top: 180px;
     font-size: 16px;
     transition-duration: 0.4s;
-}
-main .principal .btn .btn-1{
-    background-color: transparent;
-    color: black; 
-    border: 2px solid rgba(255, 255, 255, 0.2);
-}
-main .principal .btn .btn-1:hover{
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    cursor: pointer;
-}
-main .principal .btn .btn-2{
-    background-color: transparent; 
-    color: black; 
-    border: 2px solid transparent;
-}
-main .principal .btn .btn-2:hover{
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    cursor: pointer;
 }
 main .principal .btnMasInfo{
     display: flex;
@@ -198,6 +212,7 @@ main .aside .somos .somos-txt{
     font-size: 2em;
     text-align:center;
     color: #4b66d2;
+    width: 600px;
 }
 main .aside .intro-servicios{
     display: flex;
@@ -222,13 +237,13 @@ main .aside .intro-servicios .intro-txt:hover{
     border-radius: 15%;
     box-shadow: 0px 0px 15px #4b66d2;
 }
-main .servicios{
+main .aside .servicios{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 3px;
     padding: 3px;
-    background-color: linear-gradient(to bottom, #9ea3a0 0%, #4b66d2 100%);
+    background-color: #b1b1c363;
 }
 main .servicios .servicios-presentacion{
     display: flex;
