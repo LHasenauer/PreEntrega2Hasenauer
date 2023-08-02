@@ -31,7 +31,6 @@ a{
 body{
     background-color: white;
     padding: 0 76px;
-    /* max-width: 1080px; */
     font-family: var(--font-primary);
     color: var(--secondary);
 }
@@ -97,7 +96,7 @@ header .menu .menu_lista .submenu .submenu_link:hover{
 .hamburger-menu {
     display: none;
     cursor: pointer;
-  }
+}
 .hamburguer-menu .menu_burguer{
     width: 100px;
     height: 50px;
@@ -106,22 +105,28 @@ header .menu .menu_lista .submenu .submenu_link:hover{
 }
 @media (max-width: 768px) {
     .menu {
-      display: none;
+        display: none;
     }
     .hamburger-menu {
-      display: block;
+        display: block;
     }
     .hamburger-menu.active .menu_burguer {
-      background-color: #260aa7; 
+        background-color: #260aa7; 
     } 
     .menu.active {
-      display: block;
+        display: block;
     }
 }  
 /* FIN HEADER */
 /* AQUI COMIENZA FOOTER */
 .footer{
+    background-color: #9ea3a0;
     padding: 20px;
+
+}
+.footer .footer-item .Follow_us .red_social{
+    border: 2px solid rgba(0, 0, 0, 0.116);
+    border-radius: 15%;
 }
 .footer .footer-item, .footer-item1, .footer-item2, .footer-item3{
     padding: 10px;
@@ -136,10 +141,10 @@ header .menu .menu_lista .submenu .submenu_link:hover{
 /* PAGINA PRINCIPAL - HOME */
 main .line_horizontal{
     border: 2px solid #4b66d269;
-    margin: 20px 300px;
+    margin: 20px auto;
     border-radius: 50%;
 }
-main .principal{
+.pag_principal .principal{
     background-image: url(../image/FondoPrincipal1.JPG);
     background-position: center center;
     background-repeat: no-repeat;
@@ -147,14 +152,14 @@ main .principal{
     border-radius: 0 150px 0 150px;
     min-height: 500px;
 }
-main .principal .titulo{
+.pag_principal .principal .titulo{
     position: relative;
     text-align: center;
     font-size: 4em;
     color: white;
     top: 350px;
 }
-main .principal .btn{
+.pag_principal .principal .btn{
     border: none;
     color: black;
     padding: 16px 32px;
@@ -167,13 +172,13 @@ main .principal .btn{
     font-size: 16px;
     transition-duration: 0.4s;
 }
-main .principal .btnMasInfo{
+.pag_principal .principal .btnMasInfo{
     display: flex;
     justify-content: center;
     position: relative;
     top: 180px;
 }
-main .principal .btnMasInfo .btnMasInfo-1{
+.pag_principal .principal .btnMasInfo .btnMasInfo-1{
     height: 50px;
     width: 150px;
     border: none;
@@ -185,7 +190,7 @@ main .principal .btnMasInfo .btnMasInfo-1{
     z-index: 1;
     cursor: pointer;
 }
-main .principal .btnMasInfo .btnMasInfo-1::before{
+.pag_principal .principal .btnMasInfo .btnMasInfo-1::before{
     content: '';
     width: 0;
     height: 50px;
@@ -197,24 +202,24 @@ main .principal .btnMasInfo .btnMasInfo-1::before{
     display: block;
     z-index: -1;
 }
-main .principal .btnMasInfo .btnMasInfo-1:hover:before{
+.pag_principal .principal .btnMasInfo .btnMasInfo-1:hover:before{
     width: 150px;
     cursor: pointer;
 }
-main .aside{
+.pag_principal .aside{
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-wrap:wrap;
     padding: 50px 0px;
 }
-main .aside .somos .somos-txt{
+.pag_principal .aside .somos .somos-txt{
     font-size: 2em;
     text-align:center;
     color: #4b66d2;
-    width: 600px;
+    width: 900px;
 }
-main .aside .intro-servicios{
+.pag_principal .aside .intro-servicios{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -226,18 +231,34 @@ main .aside .intro-servicios{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-main .aside .intro-servicios .intro-txt{
+.pag_principal .aside .intro-servicios .intro-txt{
     text-align: center;
     font-size: 3em;
+    position: relative;
+    background-color: transparent;
     color: white;
-}
-main .aside .intro-servicios .intro-txt:hover{
+    padding: 10px 10px;
+    border: none;
     cursor: pointer;
-    padding: 10px;
-    border-radius: 15%;
-    box-shadow: 0px 0px 15px #4b66d2;
+    overflow: hidden;
 }
-main .aside .servicios{
+.pag_principal .aside .intro-servicios .intro-txt:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: transform 0.6s;
+}
+.pag_principal .aside .intro-servicios .intro-txt:after{
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.pag_principal .aside .intro-servicios .intro-txt:hover:after{
+    transform: scale(-1);
+}
+.pag_principal .aside .servicios{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -245,7 +266,7 @@ main .aside .servicios{
     padding: 3px;
     background-color: #b1b1c363;
 }
-main .servicios .servicios-presentacion{
+.pag_principal .aside .servicios .servicios-presentacion{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -258,13 +279,18 @@ main .servicios .servicios-presentacion{
     width: 300px;
     height: 150px;
 }
-main .servicios .servicios-presentacion .servicios-img{
-    width: 40px;
+.pag_principal .aside .servicios .servicios-presentacion .servicios-img{
+    width: 60px;
     height: auto;
     border: 1px solid black;
     border-radius: 100%;
     padding: 10px;
-    background-color: transparent;
+    background-color: white;
+}
+.pag_principal .aside .servicio .servicios-presentacion .servicios_txt{
+    font-size: 2em;
+    color: #4b66d2;
+    border: 1px solid black;
 }
 /* PAGINA CONTACTO */
 main .datos{
@@ -371,5 +397,3 @@ main .formulario .busqueda, .contacto{
 .group .input:focus ~ .bar:after{
     width: 50%;
 }
-  
-  
