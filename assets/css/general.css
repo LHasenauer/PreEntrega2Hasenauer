@@ -120,16 +120,24 @@ header .menu .menu_lista .submenu .submenu_link:hover{
 /* FIN HEADER */
 /* AQUI COMIENZA FOOTER */
 .footer{
-    background-color: #9ea3a0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(to bottom, grey 0% , black 100%);
     padding: 20px;
+    width: 100%;
 
 }
 .footer .footer-item .Follow_us .red_social{
+    width: 60%;
     border: 2px solid rgba(0, 0, 0, 0.116);
     border-radius: 15%;
 }
 .footer .footer-item, .footer-item1, .footer-item2, .footer-item3{
+    font-size: 1.2em;
     padding: 10px;
+    color: white;
 }
 .footer .Follow_us .red_social{
     padding: 5px;
@@ -264,7 +272,7 @@ main .line_horizontal{
     justify-content: space-around;
     margin: 3px;
     padding: 3px;
-    background-color: #b1b1c363;
+    background-image: linear-gradient(150deg, white 0%, rgb(219, 219, 219) 100%);
 }
 .pag_principal .aside .servicios .servicios-presentacion{
     display: flex;
