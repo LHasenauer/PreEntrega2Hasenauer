@@ -1,7 +1,6 @@
 {
   "name": "mi_repositorio",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +14,7 @@
   "bugs": {
     "url": "https://github.com/LHasenauer/mi_repositorio/issues"
   },
-  "homepage": "https://github.com/LHasenauer/mi_repositorio#readme"
+  "homepage": "https://github.com/LHasenauer/mi_repositorio#readme",
+  "keywords": [],
+  "description": ""
 }
