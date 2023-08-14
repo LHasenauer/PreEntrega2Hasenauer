@@ -245,6 +245,26 @@ body header .nav .hamburger-menu .menu_burguer {
   border: 1px solid black;
 }
 
+.pag_contacto .line_horizontal {
+  border: 2px solid rgba(75, 102, 210, 0.4117647059);
+  margin: 20px auto;
+  border-radius: 50%;
+}
+.pag_contacto .contacto_titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin: 20px;
+  background-color: rgba(75, 102, 210, 0.5058823529);
+}
+.pag_contacto .contacto_titulo .titulo {
+  width: 600px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+}
 .pag_contacto .datos {
   display: flex;
   flex-direction: row;
