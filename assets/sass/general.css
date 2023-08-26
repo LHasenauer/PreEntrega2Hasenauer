@@ -55,12 +55,15 @@ body header .nav .logo .imgLogo {
   color: black;
 }
 body header .nav .menu {
+  display: flex;
   flex-basis: 50%;
-  justify-content: space-between;
-  padding: 1rem;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
 }
 body header .nav .menu .menu_lista {
   float: left;
+  margin: 0 15px;
   border: 2px solid var(--principal);
   border-radius: 6px;
   transition: 0.5s ease-in-out;
@@ -68,44 +71,12 @@ body header .nav .menu .menu_lista {
 body header .nav .menu .menu_lista:hover {
   border: 2px solid var(--secondary);
 }
-body header .nav .menu .menu_lista:hover .submenu {
-  display: block;
-  text-align: start;
-  padding: 1rem;
-}
 body header .nav .menu .menu_lista .menu_link {
   text-decoration: none;
   padding: 1rem;
   font-size: var(--text-md);
 }
-body header .nav .menu .menu_lista .submenu {
-  display: none;
-  position: absolute;
-  font-size: var(--text-md);
-}
-body header .nav .menu .menu_lista .submenu .submenu_link {
-  text-decoration: none;
-}
-body header .nav .menu .menu_lista .submenu .submenu_link:hover {
-  text-decoration: none;
-  background-color: rgba(75, 102, 210, 0.4117647059);
-  padding: 0 1rem;
-  border-radius: 6px;
-  color: var(--principal);
-  transition: 0.5s ease-in-out;
-}
-body header .nav .hamburger-menu {
-  display: none;
-  cursor: pointer;
-}
-body header .nav .hamburger-menu .menu_burguer {
-  width: 100px;
-  height: 50px;
-  background-color: black;
-  margin: 5px;
-}
 
-/* PAGINA PRINCIPAL - HOME */
 .pag_principal .line_horizontal {
   border: 2px solid rgba(75, 102, 210, 0.4117647059);
   margin: 20px auto;
@@ -156,9 +127,12 @@ body header .nav .hamburger-menu .menu_burguer {
 .pag_principal .principal .titulo {
   position: relative;
   text-align: center;
-  font-size: 4em;
+  font-size: 5em;
+  font-weight: bold;
   color: white;
-  top: 350px;
+  top: 390px;
+  letter-spacing: 20px;
+  word-spacing: 20px;
 }
 .pag_principal .principal .aside {
   display: flex;
@@ -167,11 +141,14 @@ body header .nav .hamburger-menu .menu_burguer {
   flex-wrap: wrap;
   padding: 50px 0px;
 }
+.pag_principal .principal .aside .somos {
+  width: 850px;
+}
 .pag_principal .principal .aside .somos .somos-txt {
   font-size: 2em;
   text-align: center;
   color: #4b66d2;
-  width: 900px;
+  width: 450px;
 }
 .pag_principal .principal .aside .intro-servicios {
   display: flex;
@@ -276,8 +253,9 @@ body header .nav .hamburger-menu .menu_burguer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-content: center;
   flex-direction: column;
-  height: auto;
+  height: 500px;
   margin: 10px;
   padding: 10px;
   border: 2px solid #4b66d2;
@@ -288,7 +266,7 @@ body header .nav .hamburger-menu .menu_burguer {
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
-  width: 200px;
+  width: 400px;
   /* height: auto;
   margin: 10px;
   padding: 30px;
@@ -304,7 +282,7 @@ body header .nav .hamburger-menu .menu_burguer {
   font-size: 16px;
   padding: 10px 10px 10px 5px;
   display: block;
-  width: 200px;
+  width: 400px;
   border: none;
   border-bottom: 1px solid #515151;
   background: transparent;
@@ -521,19 +499,4 @@ body header .nav .hamburger-menu .menu_burguer {
   transform: translateY(-20px);
   font-size: 14px;
   color: #5264AE;
-}
-
-@media (max-width: 768px) {
-  .menu {
-    display: none;
-  }
-  .hamburger-menu {
-    display: block;
-  }
-  .hamburger-menu.active .menu_burguer {
-    background-color: #260aa7;
-  }
-  .menu.active {
-    display: block;
-  }
 }/*# sourceMappingURL=general.css.map */

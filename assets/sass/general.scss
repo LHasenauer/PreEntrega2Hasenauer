@@ -47,60 +47,31 @@ body{
                 }
             }
             .menu{
+                display: flex;
                 flex-basis: 50%;
-                justify-content: space-between;
-                padding: 1rem;
+                justify-content: flex-end;
+                margin: 0;
+                padding: 0;
                 .menu_lista{
                     float: left;
+                    margin: 0 15px;
                     border: 2px solid var(--principal);
                     border-radius: 6px;
                     transition: .5s ease-in-out;
                     &:hover{
                         border: 2px solid var(--secondary);
-                        .submenu{
-                            display: block;
-                            text-align: start;
-                            padding: 1rem;
-                        }
                     }
                     .menu_link{
                         text-decoration: none;
                         padding: 1rem;
                         font-size: var(--text-md);
                     }
-                    .submenu{
-                        display: none;
-                        position: absolute;
-                        font-size: var(--text-md);
-                        .submenu_link{
-                            text-decoration: none;
-                            &:hover{
-                                text-decoration: none;
-                                background-color: #4b66d269;
-                                padding: 0 1rem;
-                                border-radius: 6px;
-                                color: var(--principal);
-                                transition: .5s ease-in-out;
-                            }
-                        }
-                    }
-                }
-            }
-            .hamburger-menu {
-                display: none;
-                cursor: pointer;
-                .menu_burguer{
-                    width: 100px;
-                    height: 50px;
-                    background-color: black;
-                    margin: 5px;
                 }
             }
         }
     }
-
-} 
-/* PAGINA PRINCIPAL - HOME */
+}
+// Aqui comienza la pagina principal - Home
 .pag_principal{
     .line_horizontal{
         border: 2px solid #4b66d269;
@@ -151,9 +122,12 @@ body{
         .titulo{
             position: relative;
             text-align: center;
-            font-size: 4em;
+            font-size: 5em;
+            font-weight: bold;
             color: white;
-            top: 350px;
+            top: 390px;
+            letter-spacing: 20px;
+            word-spacing: 20px;            
         }
         .aside{
             display: flex;
@@ -162,11 +136,12 @@ body{
             flex-wrap:wrap;
             padding: 50px 0px;
             .somos{
+                width: 850px;
                 .somos-txt{
                     font-size: 2em;
                     text-align:center;
                     color: #4b66d2;
-                    width: 900px;
+                    width: 450px;
                 }
             }
             .intro-servicios{
@@ -242,7 +217,8 @@ body{
             }
         }
     }
-} 
+}
+// aqui comienza la pagina de contacto 
 .pag_contacto{
     .line_horizontal{
         border: 2px solid #4b66d269;
@@ -274,8 +250,9 @@ body{
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            align-content: center;
             flex-direction: column;
-            height: auto;
+            height: 500px;
             margin: 10px;
             padding: 10px;
             border: 2px solid #4b66d2;
@@ -285,7 +262,7 @@ body{
                 flex-direction: column;
                 flex-wrap: wrap;
                 align-content: center;
-                width: 200px;
+                width: 400px;
                 /* height: auto;
                 margin: 10px;
                 padding: 30px;
@@ -300,7 +277,7 @@ body{
                     font-size: 16px;
                     padding: 10px 10px 10px 5px;
                     display: block;
-                    width: 200px;
+                    width: 400px;
                     border: none;
                     border-bottom: 1px solid #515151;
                     background: transparent;
@@ -352,6 +329,7 @@ body{
         }
     }
 }
+// aqui comienza la pagina de Nosotros
 .pag_nosotros{
     .line_horizontal{
         border: 2px solid #4b66d269;
@@ -478,6 +456,7 @@ body{
         color: #4b66d281;
     }
 }
+// aqui comienza el footer
 .footer{
     display: flex;
     flex-wrap: wrap;
@@ -523,17 +502,3 @@ body{
     font-size: 14px;
     color: #5264AE;
 }  
-@media (max-width: 768px) {
-    .menu {
-        display: none;
-    }
-    .hamburger-menu {
-        display: block;
-    }
-    .hamburger-menu.active .menu_burguer {
-        background-color: #260aa7; 
-    } 
-    .menu.active {
-        display: block;
-    }
-}
